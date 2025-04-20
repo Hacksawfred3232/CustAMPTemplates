@@ -8,6 +8,7 @@ Meta.SpecificDockerImage=
 Meta.DockerRequired=False
 Meta.ContainerPolicy=RequiredOnLinux
 Meta.ContainerPolicyReason=Sonic Junior Team does not supply native Linux binaries. As such, the game needs to be compiled.
+Meta.ExtraSetupStepsURI=https://github.com/Hacksawfred3232/CustAMPTemplates/issues/1
 Meta.Prerequsites=[]
 Meta.EndpointURIFormat=steam://connect/{ip}:{GenericModule.App.Ports.$SteamQueryPort}
 Meta.ExtraContainerPackages=['build-essential','git','wget','unzip','nasm','gcc','libsdl2-mixer-dev','libpng-dev','libcurl4-openssl-dev','libgme-dev','libopenmpt-dev','libminiupnpc-dev']
