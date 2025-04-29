@@ -1,4 +1,4 @@
-Meta.DisplayName=SRB2
+Meta.DisplayName=SRB2 (Dockerfile)
 Meta.Description=SRB2 Dedicated Server (v2.2.15) (Custom Docker Image)
 Meta.Arch=x86_64
 Meta.Author=Hacksawfred3232
