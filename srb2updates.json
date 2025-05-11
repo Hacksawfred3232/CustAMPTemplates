@@ -16,7 +16,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "./srb2/srb2linux.exe",
-        "UpdateSourceArgs": "/srb2linux.exe",
+        "UpdateSourceArgs": "../../srb2linux.exe",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
