@@ -1,0 +1,27 @@
+diff --git a/src/sdl/i_system.c b/src/sdl/i_system.c
+index 50204f3f..dea8a7b3 100644
+--- a/src/sdl/i_system.c
++++ b/src/sdl/i_system.c
+@@ -3121,7 +3121,11 @@ INT32 I_StartupSystem(void)
+ #endif
+ 	I_StartupConsole();
+ #ifdef NEWSIGNALHANDLER
+-	I_Fork();
++	// This is useful when debugging. It lets GDB attach to
++	// the correct process easily.
++	// This will also let software like AMP correctly target the main process.
++	if (!M_CheckParm("-nofork"))
++		I_Fork();
+ #endif
+ 	I_RegisterSignals();
+ 	I_OutputMsg("Compiled for SDL version: %d.%d.%d\n",
+@@ -3367,7 +3371,8 @@ void I_ShutdownSystem(void)
+ 	INT32 c;
+ 
+ #ifndef NEWSIGNALHANDLER
+-	I_ShutdownConsole();
++	if (M_CheckParm("-nofork"))
++		I_ShutdownConsole();
+ #endif
+ 
+ 	for (c = MAX_QUIT_FUNCS-1; c >= 0; c--)
