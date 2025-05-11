@@ -18,7 +18,7 @@ RUN mkdir /root/Kart-Public/assets/installer
 RUN unzip Data.zip -d /root/Kart-Public/assets/installer/
 WORKDIR /root/Kart-Public/
 # Need to apply a patch before we build. Download the patch.
-RUN wget https://raw.githubusercontent.com/Hacksawfred3232/CustAMPTemplates/refs/heads/main/extrafiles/NoForkPatch.patch
+RUN wget https://raw.githubusercontent.com/Hacksawfred3232/CustAMPTemplates/refs/heads/main/extrafiles/SRB2Kart_NoForkPatch.patch
 # Apply.
 RUN patch -p1 < NoForkPatch.patch
 RUN mkdir build
