@@ -16,7 +16,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "./ringracers/ringracerslinux.exe",
-        "UpdateSourceArgs": "/ringracerslinuxexe",
+        "UpdateSourceArgs": "/ringracerslinux.exe",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
